@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPhone</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <!-- FontAwesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Manrope Font CDN  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- daisyUI CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- /* custom CSS  */ -->
+    <style>
+        .manrope-font {
+            font-family: "Manrope", sans-serif;
+        }
+
+        section {
+
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        section h1 {
+            color: white;
+        }
+
+        section .description {
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body class="manrope-font ">
+    <!-- Header Starts  -->
+    <header class=" bg-[url('./assets/pri-bg.png')] bg-no-repeat bg-cover  min-h-screen">
+        <!-- Navbar Starts  -->
+        <navbar class="px-16 py-5  bg-purple-700 grid lg:grid-cols-3 grid-cols-2 items-center w-full mb-8">
+            <div class="flex text-white items-center cursor-pointer">
+                <i class=" text-2xl fa-solid fa-arrow-right -rotate-45"></i>
+                <h1 class="ml-2 text-3xl font-bold ">XPhone</h1>
+            </div>
+            <div class="overlay bg-teal-800 fixed top-0 left-0 right-0 bottom-0 hidden transition-all duration-1000 opacity-10 z-10"
+                onclick="showMobileMenu()"></div>
+
+            <nav id="mobileNav"
+                class="flex z-20 transition-all duration-700 font-semibold fixed top-0 bottom-0 flex-col bg-purple-700 px-20 space-y-14 justify-start pt-20 text-white text-center text-lg -left-60 
+
+            lg:justify-center lg:space-x-8 lg:text-gray-500 lg:static lg:bg-transparent lg:px-0 lg:space-y-0 lg:pt-0 lg:flex-row lg:text-lg">
+                <div
+                    class="mx-auto border-2 lg:hidden text-2xl rounded-full lg:border border-white h-12 w-12 flex items-center text-white justify-center cursor-pointer">
+                    <i class="text-white fa-regular fa-user"></i>
+                </div>
+                <a href="#" class="lg:hover:text-cyan-400 text-white">Home</a>
+                <a href="#" class="lg:hover:text-cyan-400 text-white">Shop</a>
+                <a href="#" class="lg:hover:text-cyan-400 text-white">Contact</a>
+            </nav>
+            <div class="lg:flex justify-end hidden">
+                <div
+                    class="text-2xl rounded-full border border-white h-12 w-12 flex items-center text-white justify-center cursor-pointer">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
+            <div class="lg:hidden justify-end flex">
+                <button onclick="showMobileMenu()"
+                    class="text-2xl z-20 rounded-full border border-gray-300 h-12 w-12 flex items-center text-white justify-center cursor-pointer">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </navbar>
+        <!-- Navbar Ends  -->
+        <!-- Hero Section Starts  -->
+        <div class="hero  text-center">
+            <div class="hero-content  flex-col lg:py-12">
+                <img src="./assets/banner.png" class="max-w-sm rounded-lg w-48" />
+                <div class="w-4/5 flex flex-col lg:gap-6">
+                    <h1 class="text-2xl lg:text-5xl font-extrabold text-white">A Phone Designed for the Future
+                    </h1>
+                    <p class="text-lg text-white lg:text-lg  font-semibold py-1">
+                        Experience unparalleled performance, a stunning display, and groundbreaking camera technology with the all-new Xphone.
+                    </p>
+                </div>
+                <div
+                    class="bg-purple-200 rounded-3xl w-full lg:w-auto font-extrabold btn text-black border-0 hover:bg-purple-400">
+                    View Details
+                    <button class="bg-purple-300  rounded-full text-black w-7 h-7 ">
+                        <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Section Ends  -->
+    </header>
+    <!-- Header Ends  -->
+    <!-- Main section Starts  -->
+    <main class="bg-gradient-to-tl from-purple-900 via-indigo-900 to-purple-900">
+        <!-- About Section Starts  -->
+        <section>
+            <div class="lg:py-24 min-h-screen">
+                <div
+                    class="mx-auto relative flex gap-5 lg:gap-1 p-1 items-center justify-center flex-col lg:flex-row  ">
+                    <img src="./assets/Vector.png" class="hidden lg:block absolute -top-16 -left-10" alt="">
+                    <!-- right side -->
+                    <div class="text-center lg:text-left flex-1">
+                        <div
+                            class="bg-gradient-to-r from-fuchsia-800 to-violet-900  rounded-3xl font-extrabold btn btn-sm border-0 my-2 cursor-auto hover:bg-gradient-to-r from-fuchsia-800 to-violet-900">
+                            <button class="bg-transparent rounded-full text-black w-7 h-7 cursor-auto ">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            About Us
+                        </div>
+                        <h1 class="text-3xl lg:text-4xl font-extrabold">We design thoughtful, liveable spaces</h1>
+                        <p class="py-6 description font-bold">Xphone is committed to creating innovative and functional designs that elevate your mobile experience.
+                        </p>
+                        <div class="flex gap-4 flex-col">
+                            <div class="card bg-base-100 shadow-xl ">
+                                <div class="card-body flex-row  gap-4">
+                                    <img src="./assets/commercial.png" class="h-full" alt="">
+                                    <div>
+                                        <h2 class="mb-3 card-title">Commercial</h2>
+                                        <p class="text-left lg:w-4/5 ">Xphone is the ideal choice for businesses, offering unmatched productivity and connectivity features.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-base-100 shadow-xl">
+                                <div class="card-body flex-row gap-4">
+                                    <img src="./assets/residential.png" class="h-full" alt="">
+                                    <div>
+                                        <h2 class="mb-3 card-title">Residential</h2>
+                                        <p class="text-left lg:w-4/5 ">Xphone is the perfect companion for your personal life, offering entertainment, communication, and productivity features.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- left side  -->
+                    <div class="hero-content-overlay w-full flex-1">
+                        <img src="./assets/Rectangle.png"
+                            class="object-cover h-[225px] lg:h-auto max-w-lg rounded-lg shadow-lg w-full ml-auto"
+                            alt="Barn house">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About section ends  -->
+        <!-- Works section starts  -->
+        <section class="py-10 lg:py-0">
+            <div
+                class=" rounded-2xl flex flex-row justify-center py-10  items-center  bg-gradient-to-r from-fuchsia-800 to-violet-900 ">
+                <div class="grid w-full justify-between grid-cols-1 lg:grid-cols-4 gap-14 ">
+                    <div class="flex flex-col items-center text-center ">
+                        <i class="fa-regular fa-message text-cyan-400 text-3xl"></i>
+                        <div class="text-4xl mt-3 lg:mt-0 lg:text-5xl font-extrabold description card-title text-white ">235+
+                        </div>
+                        <div class=" font-bold mt-3 text-xl lg:text-sm text-cyan-300">Features</div>
+                    </div>
+                    <div class="flex flex-col items-center text-center ">
+                        <i class="fa-regular fa-rectangle-list text-cyan-400 text-3xl"></i>
+                        <div class="text-4xl mt-3 lg:mt-0 lg:text-5xl  text-white font-extrabold description card-title">50+</div>
+                        <div class=" font-bold mt-3 text-xl lg:text-sm text-cyan-300">Work Departments</div>
+                    </div>
+                    <div class="flex flex-col items-center text-center ">
+                        <i class="fa-solid fa-users text-cyan-400 text-3xl"></i>
+                        <div class="text-4xl mt-3 lg:mt-0 lg:text-5xl font-extrabold description card-title text-white ">30k+
+                        </div>
+                        <div class=" font-bold mt-3 text-xl lg:text-sm text-cyan-300">Employee</div>
+                    </div>
+                    <div class="flex flex-col items-center text-center ">
+                        <i class="fa-solid fa-user-group text-cyan-400 text-3xl"></i>
+                        <div class="text-4xl mt-3 lg:mt-0 lg:text-5xl font-extrabold description card-title">307+
+                        </div>
+                        <div class=" font-bold mt-3 text-xl lg:text-sm text-cyan-300">Staff Members</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Works section ends  -->
+        <!-- Work Process Starts  -->
+        <section class="">
+            <div class="lg:py-24 ">
+                <div class="mx-auto">
+                    <div class="text-center ">
+                        <div
+                            class="bg-gradient-to-r from-fuchsia-800 to-violet-900  rounded-3xl font-extrabold btn btn-sm border-0 my-2 cursor-auto hover:bg-gradient-to-r from-fuchsia-800 to-violet-900">
+                            <button class="bg-transparent rounded-full text-black w-7 h-7 cursor-auto ">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            How we works
+                        </div>
+                        <h1 class="py-3 text-3xl lg:text-4xl font-extrabold">Our team of experts starts by understanding your unique needs and vision.</h1>
+                        <p class="lg:w-3/5 mx-auto description font-bold">We create innovative and functional designs that meet your specific requirements.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap lg:flex-nowrap gap-6 lg:gap-2 my-6 justify-between">
+                        <div class=" mx-auto card rounded-2xl bg-pink-200 lg:w-auto shadow-xl ">
+                            <div class="card-body p-5">
+                                <img src="./assets/concept.png" class="w-12 mb-4" alt="Concept Icon" />
+                                <h2 class="card-title text-black text-xl font-bold mb-1">Concept</h2>
+                                <p class=" text-gray-900 font-bold text-sm">Our experienced team oversees every step of the process to ensure quality and efficiency.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card rounded-2xl mx-auto  bg-yellow-200 lg:w-auto shadow-xl ">
+                            <div class="card-body p-5">
+                                <img src="./assets/flow-chart.png" class="w-12 mb-4" alt="Design Process Icon" />
+                                <h2 class="card-title text-black text-xl font-bold mb-1">Design Process</h2>
+                                <p class=" text-gray-900 font-bold text-sm">We work within your budget to deliver exceptional results.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card rounded-2xl mx-auto  bg-green-200 lg:w-auto shadow-xl ">
+                            <div class="card-body p-5">
+                                <img src="./assets/vision.png" class="w-12 mb-4" alt="Supervision Icon" />
+                                <h2 class="card-title text-black text-xl font-bold mb-1">Supervision</h2>
+                                <p class=" text-gray-900 font-bold text-sm">The Xphone captivates with its blend of
+                                    rustic charm and modern.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card rounded-2xl mx-auto  bg-blue-200 lg:w-auto shadow-xl ">
+                            <div class="card-body p-5">
+                                <img src="./assets/budget-planning.png" class="w-12 mb-4" alt="Budget Planning Icon" />
+                                <h2 class="card-title text-black text-xl font-bold mb-1">Budget Planning</h2>
+                                <p class=" text-gray-900 font-bold text-sm">We work within your budget to deliver exceptional results.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- Work Process ends  -->
+        <!-- Portfolio starts  -->
+        <section class="w-full lg:bg-gradient-to-r from-purple-900 to-indigo-700 ">
+            <div class="lg:py-24 w-4/5 mx-auto">
+                <div class="mx-auto">
+                    <div class="text-center ">
+                        <div
+                            class="bg-purple-100  rounded-3xl font-extrabold btn btn-sm border-0 my-2 cursor-auto hover:bg-purple-100">
+                            <button class="bg-transparent rounded-full text-black w-7 h-7  cursor-auto ">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            Explore our Latest works
+                        </div>
+                        <h1 class="py-3 text-3xl lg:text-4xl font-extrabold">Our Latest Portfolio</h1>
+                        <p class="lg:w-3/5 mx-auto description font-bold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium possimus modi assumenda fugiat praesentium odio tempora quaerat, deserunt explicabo accusantium obcaecati asperiores harum temporibus sint dolores quidem consequatur veritatis itaque mollitia.</p>
+                    </div>
+                    <div class=" grid align-middle justify-center grid-cols-1 lg:grid-cols-12 gap-5 my-12">
+                        <div
+                            class="border-2 bg-gradient-to-r from-fuchsia-800 to-violet-900 border-fuchsia-200 rounded-2xl  hero  lg:col-span-8">
+                            <div class="hero-content rounded-2xl flex-col lg:flex-row">
+                                <img src="./assets/img1.png" class="w-full rounded-xl" />
+                                <div>
+                                    <h1 class="text-xl font-bold">Commercial</h1>
+                                    <p class="py-3 description ">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore odit dolorem fuga ea! Eum tempore maxime similique, est eos libero unde veniam deserunt, nisi maiores esse architecto incidunt, quae illo?
+                                    </p><a
+                                        class=" font-extrabold rounded-3xl  bg-transparent border-none cursor-pointer text-white">View
+                                        Details
+                                        <button class="bg-purple-400 rounded-full  w-6 h-6 ">
+                                            <i class=" fa-solid fa-arrow-right -rotate-45"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-3xl bg-gradient-to-r from-fuchsia-800 to-violet-900 lg:col-span-4"><img
+                                src="./assets/img2.png"
+                                class=" h-full w-full border-2 border-fuchsia-200 p-4 rounded-3xl" alt=""></div>
+                        <div
+                            class="rounded-3xl lg:hidden bg-gradient-to-r from-fuchsia-800 to-violet-900 lg:col-span-3">
+                            <img src="./assets/img5.png"
+                                class=" h-full w-full border-2 border-fuchsia-200 p-4 rounded-3xl" alt="">
+                        </div>
+                        <div
+                            class="rounded-3xl hidden lg:block bg-gradient-to-r from-fuchsia-800 to-violet-900 lg:col-span-3">
+                            <img src="./assets/img3.png"
+                                class=" h-full w-full border-2 border-fuchsia-200 p-4 rounded-3xl" alt=""></div>
+                        <div
+                            class="bg-gradient-to-r from-fuchsia-800 to-violet-900 border-2 border-fuchsia-200 rounded-2xl  hero  lg:col-span-6">
+                            <div class="hero-content rounded-2xl flex-col lg:flex-row">
+                                <img src="./assets/img4.png" class="rounded-xl h-full w-full" />
+                                <div>
+                                    <h1 class="text-xl font-bold">Commercial</h1>
+                                    <p class="py-3 description ">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quasi ipsum consequatur beatae sed distinctio deserunt dolorem rem labore dolores?
+                                    </p><a
+                                        class=" font-extrabold rounded-3xl  bg-transparent border-none cursor-pointer text-white">View
+                                        Details
+                                        <button class="bg-purple-400 rounded-full  w-6 h-6 ">
+                                            <i class=" fa-solid fa-arrow-right -rotate-45"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-3xl bg-gradient-to-r from-fuchsia-800 to-violet-900 lg:col-span-3 lg:hidden">
+                            <img src="./assets/img3.png"
+                                class=" h-full w-full border-2 border-fuchsia-200 p-4 rounded-3xl" alt=""></div>
+                        <div class="bg-gradient-to-r from-fuchsia-800 to-violet-900 rounded-3xl lg:col-span-3  "><img
+                                src="./assets/img5.png"
+                                class=" h-full w-full border-2 border-fuchsia-200 p-4 rounded-3xl" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Portfolio ends  -->
+        <!-- Articles starts  -->
+        <section>
+            <div class="lg:py-24 mx-auto">
+                <div class="text-center ">
+                    <div
+                        class="bg-purple-100  rounded-3xl font-extrabold btn btn-sm border-0 my-2 cursor-auto hover:bg-purple-100">
+                        <button class="bg-transparent rounded-full text-black w-7 h-7  cursor-auto">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        XPhone News
+                    </div>
+                    <h1 class="py-3 text-3xl lg:text-4xl font-extrabold">Read Our Articles and News</h1>
+                    <p class="lg:w-3/5 mx-auto description font-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex labore, perferendis necessitatibus corrupti, recusandae, in itaque doloremque voluptas neque dolores minima repellendus illum.
+                </div>
+                <div class="flex flex-wrap lg:flex-nowrap justify-between gap-6 my-6">
+                    <div class="card bg-gradient-to-r from-fuchsia-800 to-violet-900 shadow-xl rounded-3xl">
+                        <figure class="p-4">
+                            <img src="./assets/article1.png" alt="House Image 1"
+                                class="w-full h-48 object-cover rounded-3xl">
+                        </figure>
+                        <div class="card-body p-4 pt-0">
+                            <div class="flex items-center space-x-2 text-cyan-300 text-sm ">
+                                <span class="flex items-center space-x-1">
+                                    <i class="mx-1 fa-regular fa-calendar-days"></i>
+                                    <span>July 14, 2024</span>
+                                </span>
+                                <span class="flex items-center space-x-1">
+                                    <i class="mx-1 fa-regular fa-user"></i>
+                                    <span>By Admin</span>
+                                </span>
+                            </div>
+                            <h2 class="card-title mt-2 text-lg font-semibold text-white ">How to choose the furniture right of your
+                                home.
+                            </h2>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="card-actions  mt-4">
+                                <a class=" font-extrabold rounded-3xl  bg-transparent border-none text-white cursor-pointer">Read
+                                    More
+                                    <button class="bg-purple-400 rounded-full  w-6 h-6 ">
+                                        <i class=" fa-solid fa-arrow-right -rotate-45"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-gradient-to-r from-fuchsia-800 to-violet-900 shadow-xl rounded-3xl">
+                        <figure class="p-4">
+                            <img src="./assets/article2.png" alt="House Image 1"
+                                class="w-full h-48 object-cover rounded-3xl">
+                        </figure>
+                        <div class="card-body p-4 pt-0">
+                            <div class="flex items-center space-x-2 text-cyan-300 text-sm ">
+                                <span class="flex items-center space-x-1">
+                                    <i class="mx-1 fa-regular fa-calendar-days"></i>
+                                    <span>July 14, 2024</span>
+                                </span>
+                                <span class="flex items-center space-x-1">
+                                    <i class="mx-1 fa-regular fa-user"></i>
+                                    <span>By Admin</span>
+                                </span>
+                            </div>
+                            <h2 class="card-title mt-2 text-lg font-semibold text-white ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, necessitatibus!
+                            </h2>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium.
+                            </p>
+                            <div class="card-actions  mt-4">
+                                <a class=" font-extrabold rounded-3xl  bg-transparent border-none text-white cursor-pointer">Read
+                                    More
+                                    <button class="bg-purple-400 rounded-full  w-6 h-6 ">
+                                        <i class=" fa-solid fa-arrow-right -rotate-45"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-gradient-to-r from-fuchsia-800 to-violet-900 shadow-xl rounded-3xl">
+                        <figure class="p-4">
+                            <img src="./assets/article3.png" alt="House Image 1"
+                                class="w-full h-48 object-cover rounded-3xl">
+                        </figure>
+                        <div class="card-body p-4 pt-0">
+                            <div class="flex items-center space-x-2 text-cyan-300 text-sm ">
+                                <span class="flex items-center space-x-1">
+                                    <i class="mx-1 fa-regular fa-calendar-days"></i>
+                                    <span>July 14, 2024</span>
+                                </span>
+                                <span class="flex items-center space-x-1">
+                                    <i class="mx-1 fa-regular fa-user"></i>
+                                    <span>By Admin</span>
+                                </span>
+                            </div>
+                            <h2 class="card-title mt-2 text-lg font-semibold text-white ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita!
+                            </h2>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti?
+                            </p>
+                            <div class="card-actions  mt-4">
+                                <a class=" font-extrabold rounded-3xl  bg-transparent border-none text-white cursor-pointer">Read
+                                    More
+                                    <button class="bg-purple-400 rounded-full  w-6 h-6 ">
+                                        <i class=" fa-solid fa-arrow-right -rotate-45"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- article ends  -->
+        <!-- FAQs starts  -->
+        <section class="shadow-xl  bg-gradient-to-r from-fuchsia-800 to-violet-900 mb-[5rem] rounded-3xl">
+            <div class=" py-6 mb-4 lg:px-16 ">
+                <div class="text-center m-4 mt-0">
+                    <div
+                        class="bg-purple-100  rounded-3xl font-extrabold btn btn-sm border-0 my-2 cursor-auto hover:bg-purple-100 ">
+                        <button class="bg-transparent rounded-full text-black w-7 h-7 cursor-auto">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        FAQs
+                    </div>
+                    <h1 class="py-3 text-4xl font-extrabold">Frequently Asked Questions</h1>
+                    <p class=" lg:w-3/5  mx-auto description font-bold">Below are some of the most common
+                        inquiries we receive from our clients.
+                    </p>
+                </div>
+
+                <div class="m-4 lg:p-10">
+                    <div tabindex="0"
+                        class=" shadow-lg my-4 collapse collapse-arrow border-base-300 bg-base-100 border">
+                        <div class="collapse-title  text-xl font-bold">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit?
+                        </div>
+                        <div class="collapse-content">
+                            <p class=" lg:w-4/5">We offer a range of interior design services, including
+                                space planning, furniture selection, color consultation, and full-service interior
+                                design for residential and commercial spaces.</p>
+                        </div>
+                    </div>
+
+                    <div tabindex="0"
+                        class=" shadow-lg my-4 collapse collapse-arrow border-base-300 bg-base-100 border">
+                        <div class="collapse-title  text-xl font-bold">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit?
+                        </div>
+                        <div class="collapse-content">
+                            <p class=" lg:w-4/5">Our design process involves an initial consultation,
+                                design development, presentation of ideas, revisions, and final implementation. We work
+                                closely with our clients at every step to ensure their vision is realized.</p>
+                        </div>
+                    </div>
+
+                    <div tabindex="0"
+                        class=" shadow-lg my-4 collapse collapse-arrow border-base-300 bg-base-100 border">
+                        <div class="collapse-title  text-xl font-bold">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit?
+                        </div>
+                        <div class="collapse-content">
+                            <p class=" lg:w-4/5">We offer flexible pricing depending on the scope of the
+                                project. We can provide hourly rates for consultations or a fixed price for complete
+                                design services. Contact us for a detailed quote.</p>
+                        </div>
+                    </div>
+
+                    <div tabindex="0"
+                        class=" shadow-lg my-4 collapse collapse-arrow border-base-300 bg-base-100 border">
+                        <div class="collapse-title  text-xl font-bold">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit?
+                        </div>
+                        <div class="collapse-content">
+                            <p class=" lg:w-4/5">We are versatile in various interior design styles,
+                                including modern, contemporary, traditional, and eclectic. We tailor our approach to fit
+                                the client's preferences and the space's needs.</p>
+                        </div>
+                    </div>
+
+                    <div tabindex="0"
+                        class=" shadow-lg my-4 collapse collapse-arrow border-base-300 bg-base-100 border">
+                        <div class="collapse-title  text-xl font-bold">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit?
+                            oes a typical project take?</div>
+                            <div class="collapse-content">
+                            <p class=" lg:w-4/5">The duration of a project varies based on its complexity.
+                                A simple room redesign can take a few weeks, while a full home renovation might take
+                                several months. We provide a timeline estimate after the initial consultation.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="text-center">
+                        <div
+                            class="bg-purple-400 mt-4  rounded-3xl font-extrabold btn text-black border-0 hover:bg-purple-500">
+                            Ask Something
+                            <button class="rounded-full text-white bg-black w-7 h-7 ">
+                                <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- FAQs Ends  -->
+        <hr class="h-2 bg-gradient-to-r from-fuchsia-800 to-violet-900">
+        <!-- contact starts  -->
+        <section class="bg-[url('./assets/bg.jpg')] w-full bg-no-repeat bg-cover">
+            <div class=" mx-auto p-6  lg:py-16 ">
+                <div class="text-center ">
+                    <div
+                        class="bg-purple-100  rounded-3xl font-extrabold btn btn-sm border-0 my-2 cursor-auto hover:bg-purple-100 ">
+                        <button class="bg-transparent rounded-full text-black w-7 h-7 cursor-auto">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        Let’s Connect
+                    </div>
+                    <h1 class="py-3 text-4xl text-black font-extrabold">Let’s Discuss Next Project</h1>
+                    <p class="lg:w-3/5 mx-auto text-black font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut non doloremque quas possimus architecto modi in facilis voluptatibus minima deleniti.
+                    </p>
+                </div>
+                <div class="my-10 lg:w-4/6 mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" placeholder="First Name*"
+                            class="p-4 border border-fuchsia-300 rounded-full focus:outline-none ">
+                        <input type="text" placeholder="Last Name*"
+                            class="p-4 border border-fuchsia-300 rounded-full focus:outline-none ">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                        <input type="text" placeholder="Phone Number*"
+                            class="p-4 border border-fuchsia-300 rounded-full focus:outline-none ">
+                        <input type="email" placeholder="Email Number*"
+                            class="p-4 border border-fuchsia-300 rounded-full focus:outline-none ">
+                    </div>
+                    <textarea placeholder="Write your message here" rows="6"
+                        class="mt-4 p-4 w-full border border-fuchsia-300 rounded-3xl focus:outline-none "></textarea>
+                    <div
+                        class="bg-purple-400 mt-4  w-full rounded-3xl font-extrabold btn text-black border-0 hover:bg-purple-500">
+                        View Details
+                        <button class="rounded-full text-white bg-black w-7 h-7 ">
+                            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact ends  -->
+    </main>
+    <!-- main section ends  -->
+
+    <!-- Footer Starts  -->
+    <footer class="bg-[#1C1C1C] footer footer-center rounded p-10">
+        <div class="flex">
+            <div class="flex items-center justify-center">
+                <button class="bg-purple-300 rounded-full w-7 h-7 cursor-auto">
+                    <i class="  fa-solid fa-arrow-right -rotate-45"></i>
+                </button>
+            </div>
+            <a class="font-extrabold text-3xl ml-1 text-white cursor-pointer">XPhone</a>
+        </div>
+        <p class="lg:w-1/2 text-white text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, reiciendis! Voluptate facere, voluptates tempora aspernatur rem recusandae quod ducimus nam?
+        </p>
+        <nav class="grid grid-cols-1 lg:grid-cols-5 gap-4 lg:gap-16">
+            <a class="text-white link link-hover">Home</a>
+            <a class="text-white link link-hover">Services</a>
+            <a class="text-white link link-hover">Portfolio</a>
+            <a class="text-white link link-hover">Blogs</a>
+            <a class="text-white link link-hover">Contact Us</a>
+        </nav>
+        <a class="flex w-full lg:w-auto border-none font-extrabold rounded-3xl btn bg-purple-400">Book Consult
+            <button class="bg-black rounded-full text-black w-7 h-7 ">
+                <i class=" text-white fa-solid fa-arrow-right -rotate-45"></i>
+            </button>
+        </a>
+    </footer>
+    <!-- Footer Ends  -->
+     <script>
+        function showMobileMenu() {
+    const mobileNav = document.getElementById("mobileNav");
+const overlay = document.getElementsByClassName("overlay")[0];
+    mobileNav.classList.toggle('left-0');
+    overlay.classList.toggle('hidden');
+}
+     </script>
+</body>
+
+</html>
